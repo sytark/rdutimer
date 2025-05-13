@@ -1,4 +1,4 @@
-# RDUTimePicker v1.0.0
+# RDUTimer v1.0.0
 
 **Lightweight jQuery time picker** with:
 
@@ -11,14 +11,14 @@
 
 1. **Include CSS & JS**  
    ```html
-   <link rel="stylesheet" href="css/RDUTimePick.css">
+   <link rel="stylesheet" href="css/RDUTimer.css">
    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-   <script src="js/RDUTimePick.js"></script>
+   <script src="js/RDUTimer.js"></script>
 
 2. **Initialize**
     ```html
     $(document).ready(function () {
-      $('.timepicker').RDUTimePick({
+      $('.timepicker').RDUTimer({
         minutesStep: 15,         // minute step
         hourStep: 1,      // hour step
         format: '24',     // '12' for 12-hour with AM/PM or '24'
@@ -32,4 +32,4 @@
 
 4. Live Demo
 
-    Try it online on JSFiddle: https://jsfiddle.net/cjh9dms1
+    Try it online on JSFiddle: [https://jsfiddle.net/cjh9dms1](https://jsfiddle.net/96e1ntsj/)
