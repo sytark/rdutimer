@@ -1,0 +1,97 @@
+﻿/*
+ * jquery.rdutimer.css
+ * Styles for the rdutimer jQuery timepicker plugin
+ * Include this file after your main stylesheet.
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+.rdutimer-container * {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+.rdutimer-input {
+    height: 34px;
+    padding: 0 6px;
+    padding-right: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    background: url('../images/icon-clock.svg') no-repeat right 4px center;
+    border-radius: 4px;
+    background-size: 18px;
+}
+
+.rdutimer-input[placeholder="HH:MM AM"] {
+    width: 110px;
+}
+
+.rdutimer-input[placeholder="HH:MM"] {
+    width: 85px;
+}
+
+.rdutimer-panel {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    font-size: 14px;
+    margin-top: 4px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+}
+
+.rdutimer-col {
+    width: 60px;
+    max-height: 200px;
+    overflow: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+/* width */
+.rdutimer-col::-webkit-scrollbar {
+    width: 4px;
+}
+
+/* Track */
+.rdutimer-col::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+.rdutimer-col::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+.rdutimer-col::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.rdutimer-col+.rdutimer-col {
+    border-left: 1px solid #ccc;
+}
+
+.rdutimer-item {
+    width: 100%;
+    padding: 6px 8px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 3px;
+}
+
+.rdutimer-item:hover {
+    background: #f0f0f0;
+}
+
+.rdutimer-item.selected {
+    background: #007bff;
+    color: #fff;
+}
