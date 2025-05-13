@@ -1,20 +1,20 @@
-﻿/**
- * RDUTimePicker jQuery Plugin v1.0.0
+/**
+ * rdutimer jQuery Plugin v1.0.0
  * https://github.com/sytark/rdutimer
  * Licensed MIT
  *
  * Usage:
  * $(document).ready(function(){
- *   $('.rdutimer-container').rdutimer({
+ *   $('.timepicker').rdutimer({
  *     minutesStep: 15,         // minute step
  *     hourStep: 1,      // hour step
  *     format: '12',     // '12' for 12-hour with AM/PM or '24'
- *     initialTime: '8:30 PM' // optional, format depends on format setting
+ *     initialTime: '8:30 PM' // optional, format depends on format setting (exam: 08:30 PM / 20:30)
  *   });
  * });
  */
 (function($){
-  $.fn.RDUTimePicker = function(options){
+  $.fn.rdutimer = function(options){
     var settings = $.extend({
       minutesStep: 1,          // minute step
       hourStep: 1,      // hour step
