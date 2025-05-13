@@ -1,5 +1,5 @@
 ﻿/**
- * rdutimer jQuery Plugin v1.0.0
+ * RDUTimePicker jQuery Plugin v1.0.0
  * https://github.com/sytark/rdutimer
  * Licensed MIT
  *
@@ -14,7 +14,7 @@
  * });
  */
 (function($){
-  $.fn.RDUTimePick = function(options){
+  $.fn.RDUTimePicker = function(options){
     var settings = $.extend({
       minutesStep: 1,          // minute step
       hourStep: 1,      // hour step
