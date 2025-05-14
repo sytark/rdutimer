@@ -2,7 +2,7 @@
 
 **Lightweight jQuery time picker** with:
 
-- Configurable **hourStep** & **minutesStep**  
+- Configurable **stepHour** & **stepMinute**  
 - Support for **12-hour (AM/PM)** and **24-hour** modes  
 - Customizable **initial/default time**  
 - Built-in clock icon and responsive styling  
