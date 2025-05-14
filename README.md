@@ -30,6 +30,6 @@
     ```html
     <div class="timepicker"></div>
 
-4. Live Demo
+4. **Live Demo**
 
     Try it online on JSFiddle: https://jsfiddle.net/yknugf39/
