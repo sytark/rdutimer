@@ -5,19 +5,19 @@
  *
  * Usage:
  * $(document).ready(function(){
- *   $('.timepicker').rdutimer({
- *     minutesStep: 15,         // minute step
- *     hourStep: 1,      // hour step
+ *   $('.timepicker').RDUTimer({
+ *     stepMinute: 15,         // minute step
+ *     stepHour: 1,      // hour step
  *     format: '12',     // '12' for 12-hour with AM/PM or '24'
  *     initialTime: '8:30 PM' // optional, format depends on format setting (exam: 08:30 PM / 20:30)
  *   });
  * });
  */
 (function($){
-  $.fn.rdutimer = function(options){
+  $.fn.RDUTimer = function(options){
     var settings = $.extend({
-      minutesStep: 1,          // minute step
-      hourStep: 1,      // hour step
+      stepMinute: 1,          // minute step
+      stepHour: 1,      // hour step
       format: '24',     // '24' or '12'
       initialTime: null // 'HH:MM' or 'H:MM AM/PM'
     }, options);
@@ -52,18 +52,18 @@
 
       // Populate hours
       if(settings.format === '24'){
-        for(var h = 0; h < 24; h += settings.hourStep){
+        for(var h = 0; h < 24; h += settings.stepHour){
           var hh = String(h).padStart(2,'0');
           $('<div>',{ class: 'rdutimer-item hour', text: hh, 'data-value': hh }).appendTo($colH);
         }
       } else {
-        for(var h = 1; h <= 12; h += settings.hourStep){
+        for(var h = 1; h <= 12; h += settings.stepHour){
           var hh = String(h).padStart(2,'0');
           $('<div>',{ class: 'rdutimer-item hour', text: hh, 'data-value': hh }).appendTo($colH);
         }
       }
       // Populate minutes
-      for(var m = 0; m < 60; m += settings.minutesStep){
+      for(var m = 0; m < 60; m += settings.stepMinute){
         var mm = String(m).padStart(2,'0');
         $('<div>',{ class: 'rdutimer-item minute', text: mm, 'data-value': mm }).appendTo($colM);
       }
@@ -103,11 +103,11 @@
         }
         // round hours
         var hRound = settings.format === '24'
-          ? Math.floor(h0 / settings.hourStep) * settings.hourStep
-          : Math.floor((h0-1) / settings.hourStep) * settings.hourStep + 1;
+          ? Math.floor(h0 / settings.stepHour) * settings.stepHour
+          : Math.floor((h0-1) / settings.stepHour) * settings.stepHour + 1;
         selH = String(hRound).padStart(2,'0');
         // round minutes
-        var mRound = Math.floor(now.getMinutes()/settings.minutesStep)*settings.minutesStep;
+        var mRound = Math.floor(now.getMinutes()/settings.stepMinute)*settings.stepMinute;
         selM = String(mRound).padStart(2,'0');
       }
       highlight(); updateInput();
