@@ -19,8 +19,8 @@
     ```html
     $(document).ready(function () {
       $('.timepicker').RDUTimer({
-        minutesStep: 15,         // minute step
-        hourStep: 1,      // hour step
+        stepMinute: 15,         // minute step
+        stepHour: 1,      // hour step
         format: '24',     // '12' for 12-hour with AM/PM or '24'
         initialTime: '04:30' // optional, format depends on format setting (exam: 08:30 PM / 20:30)
       });
