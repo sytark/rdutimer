@@ -1,5 +1,5 @@
 /**
- * rdutimer jQuery Plugin v1.0.0
+ * RDUTimer jQuery Plugin v1.0.0
  * https://github.com/sytark/rdutimer
  * Licensed MIT
  *
