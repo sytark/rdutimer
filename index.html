@@ -4,14 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <title>RDUTimer</title>
-  <link rel="stylesheet" href="css/rdutimer.css">
+  <link rel="stylesheet" href="css/RDUTimer.css">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="js/rdutimer.js"></script>
+  <script src="js/RDUTimer.js"></script>
   <script>
     $(document).ready(function () {
-      $('.timepicker').rdutimer({
-        minutesStep: 15,         // minute step
-        hourStep: 1,      // hour step
+      $('.timepicker').RDUTimer({
+        stepMinute: 15,         // minute step
+        stepHour: 1,      // hour step
         format: '24',     // '12' for 12-hour with AM/PM or '24'
         initialTime: '04:30' // optional, format depends on format setting (exam: 08:30 PM / 20:30)
       });
