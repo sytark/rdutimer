@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+$font-stack: 'Roboto', Arial, Helvetica, sans-serif;
+$icon-clock: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' height='20px' viewBox='0 0 24 24' width='20px' fill='%23000000'><path d='M0 0h24v24H0V0z' fill='none'/><path d='M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm-.22-13h-.06c-.4 0-.72.32-.72.72v4.72c0 .35.18.68.49.86l4.15 2.49c.34.2.78.1.98-.24.21-.34.1-.79-.25-.99l-3.87-2.3V7.72c0-.4-.32-.72-.72-.72z'/></svg>");
+
+.rdutimer-container {
+  *, & * {
+    font-family: $font-stack;
+    box-sizing: border-box;
+  }
+
+  .rdutimer-input {
+    height: 34px;
+    padding: 0 6px;
+    padding-right: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    background: $icon-clock no-repeat right 4px center;
+    background-size: 18px;
+
+    &[placeholder="HH:MM AM"] {
+      width: 110px;
+    }
+
+    &[placeholder="HH:MM"] {
+      width: 85px;
+    }
+  }
+
+  .rdutimer-panel {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    font-size: 14px;
+    margin-top: 4px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+  }
+
+  .rdutimer-col {
+    width: 60px;
+    max-height: 200px;
+    overflow: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+
+    // özelleştirilmiş scrollbar
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+    &::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #888;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+
+    & + .rdutimer-col {
+      border-left: 1px solid #ccc;
+    }
+  }
+
+  .rdutimer-item {
+    width: 100%;
+    padding: 6px 8px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 3px;
+
+    &:hover {
+      background: #f0f0f0;
+    }
+
+    &.selected {
+      background: #007bff;
+      color: #fff;
+    }
+  }
+}
